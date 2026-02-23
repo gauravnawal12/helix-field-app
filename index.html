@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f2efe8;--bg2:#e8e4db;--surface:#fff;--surface2:#f8f5f0;
+  --bg:#f2efe8;--surface:#fff;--surface2:#f8f5f0;
   --border:rgba(45,62,80,.1);--border-med:rgba(45,62,80,.18);
   --gold:#f5a623;--gold-dk:#c8850a;--gold-lt:rgba(245,166,35,.1);
   --slate:#2d3e50;--slate-md:#4a5f75;--slate-lt:#8fa3b4;
@@ -56,8 +56,7 @@ body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font
 .dt-lbl{font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.4);font-weight:600}
 .dt-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:#fff;letter-spacing:.02em}
 .dt-val.gold{color:var(--gold)}
-.live-dot{width:6px;height:6px;background:var(--ok);border-radius:50%;animation:pulse 2s infinite;
-  display:inline-block;margin-right:5px;vertical-align:middle}
+.live-dot{width:6px;height:6px;background:var(--ok);border-radius:50%;animation:pulse 2s infinite;display:inline-block;margin-right:5px;vertical-align:middle}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.6)}}
 
 /* PROGRESS */
@@ -70,18 +69,15 @@ body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font
 .card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:18px;margin-top:12px;box-shadow:var(--sh-sm)}
 .sec-ttl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--gold-dk);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.sec-icon{width:24px;height:24px;background:var(--gold-lt);border-radius:6px;display:flex;
-  align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.sec-icon{width:24px;height:24px;background:var(--gold-lt);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
 .hr{height:1px;background:var(--border);margin:12px 0}
 .fld{display:flex;flex-direction:column;gap:5px;margin-bottom:11px}
 .fld:last-child{margin-bottom:0}
 .lbl{font-size:11px;font-weight:700;color:var(--slate-md);letter-spacing:.05em;text-transform:uppercase;display:flex;align-items:center;gap:6px}
 .req{color:var(--gold-dk);font-size:14px;line-height:1}
-.opt-tag{background:rgba(143,163,180,.15);color:var(--slate-lt);font-size:9px;padding:2px 6px;
-  border-radius:20px;letter-spacing:.05em;font-weight:600;text-transform:uppercase}
+.opt-tag{background:rgba(143,163,180,.15);color:var(--slate-lt);font-size:9px;padding:2px 6px;border-radius:20px;letter-spacing:.05em;font-weight:600;text-transform:uppercase}
 input,select,textarea{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-sm);
-  color:var(--text);font-family:'Barlow',sans-serif;font-size:15px;padding:10px 13px;transition:all .2s;outline:none;
-  -webkit-appearance:none;appearance:none}
+  color:var(--text);font-family:'Barlow',sans-serif;font-size:15px;padding:10px 13px;transition:all .2s;outline:none;-webkit-appearance:none;appearance:none}
 input:focus,select:focus,textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px var(--gold-lt)}
 input::placeholder,textarea::placeholder{color:var(--slate-lt)}
 select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238fa3b4' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -90,24 +86,100 @@ select option{background:#fff;color:var(--text)}
 textarea{resize:vertical;min-height:76px;line-height:1.5}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 
-/* GPS */
-.gps-box{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-sm);overflow:hidden}
-.gps-top{display:flex;align-items:center;gap:8px;padding:10px 12px}
-.btn-gps{background:var(--slate);border:none;border-radius:7px;color:#fff;padding:8px 14px;
-  cursor:pointer;font-size:12px;font-family:'Barlow',sans-serif;font-weight:700;
-  transition:all .2s;display:flex;align-items:center;gap:5px;white-space:nowrap;flex-shrink:0}
-.btn-gps:hover{background:var(--gold)}.btn-gps:disabled{opacity:.5;cursor:not-allowed;pointer-events:none}
-.gps-addr{flex:1;background:transparent;border:none;border-radius:0;padding:0;font-size:13px;color:var(--slate-md)}
-.gps-addr:focus{box-shadow:none;background:transparent;border:none}
-.gps-detail{border-top:1px solid var(--border);padding:10px 13px;display:none;gap:10px;flex-wrap:wrap}
-.gps-detail.show{display:flex}
-.gps-coords-t{font-size:11px;color:var(--muted);flex:1;min-width:120px}
-.gps-map-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--gold-dk);text-decoration:none}
-.gps-map-link:hover{color:var(--slate)}
-.gps-acc{font-size:10px;margin-top:3px}
-.gps-acc.good{color:var(--ok)}.gps-acc.ok{color:var(--warn)}.gps-acc.bad{color:var(--err)}
-.gps-stat{padding:0 13px 9px;font-size:12px;display:none}
-.gps-stat.show{display:block}
+/* ═══ GPS LOCATION CARD ═══ */
+.loc-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-sm);overflow:hidden}
+.loc-top{padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.loc-btn-row{display:flex;gap:8px}
+.btn-pick-map{flex:1;background:var(--slate);border:none;border-radius:8px;color:#fff;
+  padding:11px 14px;cursor:pointer;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;
+  transition:all .2s;display:flex;align-items:center;justify-content:center;gap:7px;letter-spacing:.02em}
+.btn-pick-map:hover{background:var(--gold);transform:translateY(-1px);box-shadow:0 4px 14px var(--gold-lt)}
+.btn-pick-map .map-icon{font-size:16px}
+.btn-gps-quick{background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;color:var(--slate-md);
+  padding:11px 13px;cursor:pointer;font-family:'Barlow',sans-serif;font-weight:600;font-size:12px;
+  transition:all .2s;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.btn-gps-quick:hover{background:var(--slate);color:#fff;border-color:var(--slate)}
+.btn-gps-quick:disabled{opacity:.5;cursor:not-allowed;pointer-events:none}
+.loc-confirmed{display:none;background:rgba(39,174,96,.06);border:1.5px solid rgba(39,174,96,.25);
+  border-radius:8px;padding:11px 14px;gap:10px;align-items:flex-start}
+.loc-confirmed.show{display:flex}
+.loc-conf-pin{font-size:20px;flex-shrink:0;line-height:1.3}
+.loc-conf-body{flex:1;min-width:0}
+.loc-conf-addr{font-size:13px;font-weight:600;color:var(--slate);line-height:1.4;margin-bottom:4px;word-break:break-word}
+.loc-conf-coords{font-size:11px;color:var(--muted);margin-bottom:4px}
+.loc-conf-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.loc-maps-link{font-size:12px;font-weight:700;color:var(--gold-dk);text-decoration:none;display:inline-flex;align-items:center;gap:3px}
+.loc-maps-link:hover{color:var(--slate)}
+.loc-acc-badge{font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600}
+.loc-acc-badge.good{background:rgba(39,174,96,.12);color:#1e8449}
+.loc-acc-badge.ok{background:rgba(243,156,18,.12);color:#7d5500}
+.loc-acc-badge.bad{background:rgba(231,76,60,.1);color:#922b21}
+.loc-conf-change{background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--slate-lt);
+  font-size:11px;padding:3px 9px;cursor:pointer;font-family:'Barlow',sans-serif;font-weight:600;transition:all .2s;white-space:nowrap}
+.loc-conf-change:hover{border-color:var(--gold-dk);color:var(--gold-dk)}
+.loc-status{padding:0 14px 10px;font-size:12px;display:none}
+.loc-status.show{display:block}
+
+/* ═══ FULLSCREEN MAP MODAL ═══ */
+.map-modal-overlay{position:fixed;inset:0;z-index:1000;background:#000;display:none;flex-direction:column}
+.map-modal-overlay.open{display:flex}
+
+.map-modal-header{
+  position:absolute;top:0;left:0;right:0;z-index:10;
+  background:linear-gradient(to bottom,rgba(0,0,0,.85) 0%,rgba(0,0,0,.6) 70%,transparent 100%);
+  padding:14px 16px 28px;
+  display:flex;flex-direction:column;gap:10px}
+
+.map-modal-toprow{display:flex;align-items:center;gap:10px}
+.btn-map-close{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);
+  border-radius:50%;width:38px;height:38px;color:#fff;font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.btn-map-close:hover{background:var(--err)}
+.map-modal-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;
+  color:#fff;letter-spacing:.04em;text-transform:uppercase}
+.map-modal-sub{font-size:11px;color:rgba(255,255,255,.7);margin-top:2px}
+
+/* Search box */
+.map-search-wrap{position:relative;width:100%}
+.map-search-input{width:100%;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
+  border:none;border-radius:10px;padding:11px 14px 11px 38px;font-size:14px;
+  font-family:'Barlow',sans-serif;color:var(--text);outline:none;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.map-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:15px;pointer-events:none}
+#pac-container{position:absolute;top:100%;left:0;right:0;background:#fff;border-radius:10px;
+  box-shadow:0 8px 28px rgba(0,0,0,.25);overflow:hidden;z-index:20;margin-top:4px}
+
+/* Map canvas */
+#mapCanvas{flex:1;width:100%;position:absolute;inset:0}
+
+/* Centre crosshair */
+.map-crosshair{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);
+  z-index:5;pointer-events:none;display:flex;flex-direction:column;align-items:center}
+.crosshair-pin{font-size:38px;filter:drop-shadow(0 3px 6px rgba(0,0,0,.4));line-height:1}
+.crosshair-dot{width:6px;height:6px;background:rgba(0,0,0,.4);border-radius:50%;margin-top:-2px}
+
+/* Bottom confirm panel */
+.map-modal-footer{
+  position:absolute;bottom:0;left:0;right:0;z-index:10;
+  background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.7) 60%,transparent 100%);
+  padding:28px 16px 20px}
+.map-addr-preview{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;padding:12px 14px;margin-bottom:12px}
+.map-addr-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55);font-weight:600;margin-bottom:4px}
+.map-addr-txt{font-size:14px;color:#fff;font-weight:600;line-height:1.4;min-height:20px}
+.map-coords-txt{font-size:11px;color:rgba(255,255,255,.6);margin-top:3px}
+.btn-confirm-loc{width:100%;background:var(--gold);border:none;border-radius:12px;
+  color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;
+  letter-spacing:.08em;text-transform:uppercase;padding:15px;cursor:pointer;
+  transition:all .2s;box-shadow:0 4px 20px rgba(245,166,35,.4)}
+.btn-confirm-loc:hover{background:var(--gold-dk);transform:translateY(-1px)}
+.btn-confirm-loc:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* "Move pin here" tooltip that shows when map is dragged */
+.map-drag-hint{position:absolute;top:50%;left:50%;transform:translate(-50%, -70px);
+  background:rgba(0,0,0,.75);backdrop-filter:blur(8px);color:#fff;
+  font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;
+  white-space:nowrap;pointer-events:none;z-index:6;opacity:0;transition:opacity .3s}
+.map-drag-hint.show{opacity:1}
 
 /* DISTANCE */
 .dist-box{background:var(--gold-lt);border:1.5px solid rgba(245,166,35,.28);border-radius:var(--r-sm);
@@ -133,8 +205,6 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
   color:#fff;width:28px;height:28px;display:flex;align-items:center;justify-content:center;
   cursor:pointer;font-size:14px;box-shadow:0 2px 8px rgba(0,0,0,.2);transition:all .2s;z-index:5}
 .btn-del:hover{background:#c0392b;transform:scale(1.1)}
-
-/* upload status rows */
 .up-row{display:none;margin-top:7px;padding:9px 12px;border-radius:var(--r-sm);font-size:12px;align-items:center;gap:8px}
 .up-row.show{display:flex}
 .up-row.uploading{background:rgba(41,128,185,.07);border:1px solid rgba(41,128,185,.2);color:#1a5276}
@@ -142,8 +212,7 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 .up-row.done{background:rgba(39,174,96,.08);border:1px solid rgba(39,174,96,.2);color:#1e8449;font-weight:600}
 .up-row.error{background:rgba(231,76,60,.06);border:1px solid rgba(231,76,60,.2);color:var(--err)}
 .up-row a{color:var(--gold-dk);font-weight:700;text-decoration:underline;margin-left:auto;white-space:nowrap;font-size:11px}
-.spin-sm{width:14px;height:14px;border:2px solid rgba(26,82,118,.2);border-top-color:#2980b9;
-  border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0}
+.spin-sm{width:14px;height:14px;border:2px solid rgba(26,82,118,.2);border-top-color:#2980b9;border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0}
 
 /* SUBMIT */
 .sub-wrap{margin-top:18px}
@@ -155,8 +224,7 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 .btn-sub:hover{background:#1a2d40;transform:translateY(-2px);box-shadow:var(--sh-lg)}
 .btn-sub:active{transform:translateY(0)}
 .btn-sub:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.spin{width:18px;height:18px;border:2px solid rgba(255,255,255,.3);border-top-color:var(--gold);
-  border-radius:50%;animation:spin .7s linear infinite;display:none;flex-shrink:0}
+.spin{width:18px;height:18px;border:2px solid rgba(255,255,255,.3);border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite;display:none;flex-shrink:0}
 .btn-sub.loading .spin{display:block}
 @keyframes spin{to{transform:rotate(360deg)}}
 
@@ -164,7 +232,7 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
   background:var(--slate);color:#fff;padding:12px 20px;border-radius:50px;font-size:13px;font-weight:600;
   font-family:'Barlow',sans-serif;box-shadow:var(--sh-lg);opacity:0;
-  transition:all .4s cubic-bezier(.34,1.56,.64,1);z-index:2000;pointer-events:none;
+  transition:all .4s cubic-bezier(.34,1.56,.64,1);z-index:3000;pointer-events:none;
   border-left:4px solid var(--gold);max-width:88vw;text-align:center;white-space:pre-line}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .toast.err{border-left-color:var(--err);background:#c0392b}
@@ -172,15 +240,12 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 .toast.warn{border-left-color:var(--warn);background:#7d5a00;color:#fff}
 
 /* MODALS */
-.overlay{position:fixed;inset:0;background:rgba(26,42,56,.75);backdrop-filter:blur(8px);z-index:300;
-  display:none;align-items:center;justify-content:center;padding:18px}
+.overlay{position:fixed;inset:0;background:rgba(26,42,56,.75);backdrop-filter:blur(8px);z-index:300;display:none;align-items:center;justify-content:center;padding:18px}
 .overlay.open{display:flex}
-.modal{background:var(--surface);border:1px solid var(--border);border-radius:20px;width:100%;
-  max-width:640px;max-height:88vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--sh-lg)}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:20px;width:100%;max-width:640px;max-height:88vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--sh-lg)}
 .modal-hdr{padding:15px 20px 13px;display:flex;align-items:center;justify-content:space-between;background:var(--slate);color:#fff;flex-shrink:0}
 .modal-ttl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase}
-.modal-x{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;
-  color:rgba(255,255,255,.7);width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;transition:all .2s}
+.modal-x{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;color:rgba(255,255,255,.7);width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;transition:all .2s}
 .modal-x:hover{background:var(--err);color:#fff;border-color:var(--err)}
 .modal-body{overflow-y:auto;padding:14px 18px;flex:1}
 .ec{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:13px;margin-bottom:9px;border-left:3px solid var(--gold)}
@@ -193,28 +258,20 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 .ec-sync.synced{color:var(--ok)}.ec-sync.pend{color:var(--warn)}
 
 /* CONFIG */
-.cfg-ov{position:fixed;inset:0;background:rgba(242,239,232,.97);z-index:500;
-  display:flex;align-items:center;justify-content:center;padding:18px;overflow-y:auto}
-.cfg-box{background:#fff;border:1px solid var(--border);border-radius:22px;width:100%;
-  max-width:500px;padding:28px;box-shadow:var(--sh-lg);margin:auto}
+.cfg-ov{position:fixed;inset:0;background:rgba(242,239,232,.97);z-index:500;display:flex;align-items:center;justify-content:center;padding:18px;overflow-y:auto}
+.cfg-box{background:#fff;border:1px solid var(--border);border-radius:22px;width:100%;max-width:500px;padding:28px;box-shadow:var(--sh-lg);margin:auto}
 .cfg-logo{height:44px;margin-bottom:18px;object-fit:contain;display:block}
-.cfg-ttl{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--slate);
-  margin-bottom:4px;text-transform:uppercase;letter-spacing:.02em}
+.cfg-ttl{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--slate);margin-bottom:4px;text-transform:uppercase;letter-spacing:.02em}
 .cfg-sub{font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.5}
-.cfg-sh{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;color:var(--slate);
-  text-transform:uppercase;letter-spacing:.1em;margin:18px 0 9px;padding-bottom:5px;border-bottom:2px solid var(--gold-lt)}
+.cfg-sh{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.1em;margin:18px 0 9px;padding-bottom:5px;border-bottom:2px solid var(--gold-lt)}
 .cfg-lbl{font-size:11px;font-weight:700;color:var(--slate-md);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px;display:block}
 .cfg-fld{margin-bottom:12px}
 .cfg-hint{font-size:11px;color:var(--slate-lt);margin-top:3px;line-height:1.4}
-.btn-cfg{width:100%;background:var(--slate);border:none;border-radius:var(--r-sm);color:#fff;
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase;
-  letter-spacing:.08em;padding:13px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;margin-top:4px}
+.btn-cfg{width:100%;background:var(--slate);border:none;border-radius:var(--r-sm);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.08em;padding:13px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;margin-top:4px}
 .btn-cfg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
 .btn-cfg:hover{background:#1a2d40}
-.note-box{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.25);border-radius:var(--r-sm);
-  padding:10px 12px;font-size:11.5px;color:var(--slate-md);line-height:1.6;margin-top:12px}
-.btn-skip{width:100%;background:transparent;border:1.5px solid var(--border);color:var(--muted);
-  border-radius:var(--r-sm);padding:9px;margin-top:9px;cursor:pointer;font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;transition:all .2s}
+.note-box{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.25);border-radius:var(--r-sm);padding:10px 12px;font-size:11.5px;color:var(--slate-md);line-height:1.6;margin-top:12px}
+.btn-skip{width:100%;background:transparent;border:1.5px solid var(--border);color:var(--muted);border-radius:var(--r-sm);padding:9px;margin-top:9px;cursor:pointer;font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;transition:all .2s}
 .btn-skip:hover{border-color:var(--slate-md);color:var(--slate)}
 
 @media(max-width:480px){.g2{grid-template-columns:1fr}.form-wrap{padding:10px 12px 48px}.dt-bar,.prog{padding-left:12px;padding-right:12px}}
@@ -222,6 +279,11 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 </style>
 </head>
 <body>
+
+<!-- Google Maps JS API (loaded async) -->
+<script>
+window.GMAPS_KEY = "AIzaSyBxouaJ6kXpGKylmluowRoXTgAc9pylnPE";
+</script>
 
 <!-- CONFIG -->
 <div class="cfg-ov" id="cfgOv">
@@ -233,18 +295,15 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
   <div class="cfg-fld">
    <label class="cfg-lbl">Apps Script Web App URL</label>
    <input type="url" id="cfgUrl" placeholder="https://script.google.com/macros/s/…/exec">
-   <div class="cfg-hint">One URL handles both sheet rows and photo uploads.</div>
   </div>
   <div class="cfg-fld">
    <label class="cfg-lbl">Drive Folder ID</label>
-   <input type="text" id="cfgFolder" placeholder="Paste ID from Drive folder URL">
-   <div class="cfg-hint">Open your folder on Drive → copy ID from URL: drive.google.com/drive/folders/<b>THIS_PART</b></div>
+   <input type="text" id="cfgFolder" placeholder="Paste folder ID from Drive URL">
+   <div class="cfg-hint">Open your Drive folder → copy ID from: drive.google.com/drive/folders/<b>THIS_PART</b></div>
   </div>
   <button class="btn-cfg" onclick="saveConfig()">Save & Start Using App →</button>
   <div class="note-box">
-   <b>📌 One-time setup:</b><br>
-   Google Sheet → Extensions → Apps Script → paste script → Save → Deploy → Web App → <b>Anyone</b> → copy URL above.<br><br>
-   <b>📁 Drive folder:</b> Create a folder → open it → copy the ID from the URL → paste above.
+   <b>📌 One-time setup:</b> Google Sheet → Extensions → Apps Script → paste script → Deploy → Web App → <b>Anyone</b> → copy URL above.
   </div>
   <button class="btn-skip" onclick="skipConfig()">Skip — save locally only</button>
  </div>
@@ -276,8 +335,7 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 </div>
 
 <!-- PROGRESS -->
-<div class="prog"><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div>
-<div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
+<div class="prog"><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
 
 <!-- FORM -->
 <div class="form-wrap">
@@ -301,29 +359,45 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
     <button type="button" class="btn-del" onclick="deletePhoto('site')">✕</button>
    </div>
    <div class="up-row uploading" id="siteUploading"><div class="spin-sm"></div> Uploading to Google Drive…</div>
-   <div class="up-row queued"    id="siteQueued">📋 Photo saved locally — Drive link will update after submit</div>
+   <div class="up-row queued"    id="siteQueued">📋 Saved locally — will upload on submit</div>
    <div class="up-row done"      id="siteDone">✅ Uploaded to Drive <a id="siteDriveLink" href="#" target="_blank">View ↗</a></div>
    <div class="up-row error"     id="siteError">⚠️ <span id="siteErrTxt">Upload failed</span></div>
   </div>
 
   <div class="hr"></div>
 
-  <!-- GPS -->
+  <!-- LOCATION PICKER -->
   <div class="fld">
    <div class="lbl">GPS Location <span class="req">*</span></div>
-   <div class="gps-box">
-    <div class="gps-top">
-     <button type="button" class="btn-gps" id="btnGps" onclick="captureGPS()">📍 Capture GPS</button>
-     <input type="text" class="gps-addr" id="gpsAddr" placeholder="Tap Capture GPS →" readonly>
+   <div class="loc-card">
+    <div class="loc-top">
+     <div class="loc-btn-row">
+      <button type="button" class="btn-pick-map" onclick="openMapPicker()">
+       <span class="map-icon">🗺</span> Pick on Google Maps
+      </button>
+      <button type="button" class="btn-gps-quick" id="btnGpsQuick" onclick="quickGPS()">
+       📍 Auto GPS
+      </button>
+     </div>
+     <!-- Confirmed location display -->
+     <div class="loc-confirmed" id="locConfirmed">
+      <div class="loc-conf-pin">📍</div>
+      <div class="loc-conf-body">
+       <div class="loc-conf-addr" id="locAddr">—</div>
+       <div class="loc-conf-coords" id="locCoords"></div>
+       <div class="loc-conf-links">
+        <a class="loc-maps-link" id="locMapsLink" href="#" target="_blank">Open in Google Maps ↗</a>
+        <span class="loc-acc-badge" id="locAccBadge"></span>
+        <button type="button" class="loc-conf-change" onclick="openMapPicker()">Change</button>
+       </div>
+      </div>
+     </div>
     </div>
-    <div class="gps-detail" id="gpsDetail">
-     <div class="gps-coords-t" id="gpsCoordsT"></div>
-     <div><a class="gps-map-link" id="gpsMapLink" href="#" target="_blank">🗺 Open in Google Maps ↗</a>
-     <div class="gps-acc" id="gpsAccT"></div></div>
-    </div>
-    <div class="gps-stat" id="gpsStat"></div>
+    <div class="loc-status" id="locStatus"></div>
    </div>
-   <div style="font-size:11px;color:var(--slate-lt);margin-top:3px">Google Maps URL saved as clickable link in Sheet</div>
+   <div style="font-size:11px;color:var(--slate-lt);margin-top:4px">
+    📌 Tap <b>Pick on Google Maps</b> for exact pin placement (recommended) · or Auto GPS for quick capture
+   </div>
   </div>
 
   <div class="fld">
@@ -339,7 +413,7 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
     <div style="flex:1">
      <div class="dist-lbl">From Last Visit</div>
      <div class="dist-num" id="distNum">—</div>
-     <div class="dist-sub" id="distSub">Select name + capture GPS to auto-calculate</div>
+     <div class="dist-sub" id="distSub">Select name + pick location to auto-calculate</div>
     </div>
    </div>
    <div class="dist-override" onclick="toggleManualDist()">Enter distance manually ↓</div>
@@ -368,7 +442,6 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
     <input type="tel" id="contactMob" placeholder="10-digit" maxlength="10" oninput="updateProg()">
    </div>
   </div>
-  <!-- VISITING CARD -->
   <div class="fld" style="margin-bottom:0">
    <div class="lbl">Visiting Card <span class="opt-tag">Optional</span></div>
    <div class="upload-zone" id="cardZone">
@@ -382,7 +455,7 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
     <button type="button" class="btn-del" onclick="deletePhoto('card')">✕</button>
    </div>
    <div class="up-row uploading" id="cardUploading"><div class="spin-sm"></div> Uploading to Google Drive…</div>
-   <div class="up-row queued"    id="cardQueued">📋 Card saved locally — Drive link will update after submit</div>
+   <div class="up-row queued"    id="cardQueued">📋 Saved locally — will upload on submit</div>
    <div class="up-row done"      id="cardDone">✅ Uploaded to Drive <a id="cardDriveLink" href="#" target="_blank">View ↗</a></div>
    <div class="up-row error"     id="cardError">⚠️ <span id="cardErrTxt">Upload failed</span></div>
   </div>
@@ -463,6 +536,47 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 </form>
 </div>
 
+<!-- ═══ FULLSCREEN MAP MODAL ═══ -->
+<div class="map-modal-overlay" id="mapModal">
+ <div id="mapCanvas"></div>
+
+ <!-- Fixed crosshair in centre of map -->
+ <div class="map-crosshair">
+  <div class="crosshair-pin">📍</div>
+  <div class="crosshair-dot"></div>
+ </div>
+
+ <!-- Drag hint -->
+ <div class="map-drag-hint" id="mapDragHint">Drag map to move pin</div>
+
+ <!-- Header: close + search -->
+ <div class="map-modal-header">
+  <div class="map-modal-toprow">
+   <button class="btn-map-close" onclick="closeMapPicker()">✕</button>
+   <div>
+    <div class="map-modal-title">📍 Pick Location</div>
+    <div class="map-modal-sub">Drag map so pin lands exactly on the site</div>
+   </div>
+  </div>
+  <div class="map-search-wrap">
+   <span class="map-search-icon">🔍</span>
+   <input type="text" class="map-search-input" id="mapSearchInput" placeholder="Search for a place, area or landmark…">
+  </div>
+ </div>
+
+ <!-- Footer: address preview + confirm button -->
+ <div class="map-modal-footer">
+  <div class="map-addr-preview">
+   <div class="map-addr-lbl">Pin Location</div>
+   <div class="map-addr-txt" id="mapAddrTxt">Move the map to position the pin…</div>
+   <div class="map-coords-txt" id="mapCoordsTxt"></div>
+  </div>
+  <button class="btn-confirm-loc" id="btnConfirmLoc" onclick="confirmLocation()" disabled>
+   ✓ Confirm This Location
+  </button>
+ </div>
+</div>
+
 <!-- ENTRIES MODAL -->
 <div class="overlay" id="entriesOv">
  <div class="modal">
@@ -483,473 +597,544 @@ textarea{resize:vertical;min-height:76px;line-height:1.5}
 
 <script>
 // ══════════════════════════════════════════════════════════
-//  HELIX FIELD APP  v4.0
-//
-//  CORS SOLUTION:
-//  Google Apps Script Web Apps have a quirk — they don't
-//  return CORS headers for preflight (OPTIONS) requests,
-//  so XHR and fetch() both fail when sending JSON from a
-//  different origin (like GitHub Pages).
-//
-//  The fix: send ALL data as plain text (not JSON content-type).
-//  When Content-Type is text/plain, the browser skips the
-//  preflight and the request goes straight through.
-//  Apps Script receives it fine — we just parse it server-side.
-//
-//  For photos: we chunk large base64 strings and send them
-//  via multiple no-cors requests, reassembled server-side.
-//  For small photos we send in one shot.
+//  HELIX FIELD APP  v5.0  — Google Maps Pin Picker
 // ══════════════════════════════════════════════════════════
 
 const APP = {
   url:    localStorage.getItem('hx_url')    || '',
   folder: localStorage.getItem('hx_folder') || '',
-  gps:    null,
+  gps:    null,   // confirmed location {lat,lng,address,mapsUrl,accuracy,source}
   photos: {
-    site: { b64:null, file:null, driveUrl:null, status:'idle' },
-    card: { b64:null, file:null, driveUrl:null, status:'idle' }
+    site: {b64:null,file:null,driveUrl:null,status:'idle'},
+    card: {b64:null,file:null,driveUrl:null,status:'idle'}
   },
   distKm: null,
-  busy:   false
+  busy:   false,
+  map:    null,   // Google Map instance
+  geocoder: null,
+  autocomplete: null,
+  mapReady: false,
+  pendingMapOpen: false
 };
 
 // ── HELPERS ──────────────────────────────────────────────
 const el  = id => document.getElementById(id);
 const v   = id => el(id)?.value || '';
-const set = (id, val) => { if(el(id)) el(id).value = val; };
-function showRow(id)  { el(id).classList.add('show'); }
-function hideRow(id)  { el(id).classList.remove('show'); }
+const set = (id,val) => { if(el(id)) el(id).value=val; };
+function showRow(id){ el(id).classList.add('show'); }
+function hideRow(id){ el(id).classList.remove('show'); }
 function closeModal(id){ el(id).classList.remove('open'); }
-function toast(msg, type='ok') {
-  const t = el('toast');
-  t.textContent = msg; t.className = 'toast ' + type;
+function toast(msg,type='ok'){
+  const t=el('toast'); t.textContent=msg; t.className='toast '+type;
   t.classList.add('show'); clearTimeout(t._t);
-  t._t = setTimeout(() => t.classList.remove('show'), 4200);
+  t._t=setTimeout(()=>t.classList.remove('show'),4200);
 }
 
 // ── CONFIG ───────────────────────────────────────────────
-function saveConfig() {
-  const u = v('cfgUrl').trim(), f = v('cfgFolder').trim();
-  if (u) { APP.url = u;    localStorage.setItem('hx_url', u); }
-  if (f) { APP.folder = f; localStorage.setItem('hx_folder', f); }
-  el('cfgOv').style.display = 'none';
-  toast('✅ Settings saved', 'ok');
+function saveConfig(){
+  const u=v('cfgUrl').trim(), f=v('cfgFolder').trim();
+  if(u){APP.url=u; localStorage.setItem('hx_url',u);}
+  if(f){APP.folder=f; localStorage.setItem('hx_folder',f);}
+  el('cfgOv').style.display='none'; toast('✅ Settings saved','ok');
 }
-function skipConfig() { el('cfgOv').style.display = 'none'; }
-function showConfig() { set('cfgUrl', APP.url); set('cfgFolder', APP.folder); el('cfgOv').style.display = 'flex'; }
+function skipConfig(){ el('cfgOv').style.display='none'; }
+function showConfig(){ set('cfgUrl',APP.url); set('cfgFolder',APP.folder); el('cfgOv').style.display='flex'; }
 
-window.addEventListener('load', () => {
-  if (APP.url) el('cfgOv').style.display = 'none';
+// ── INIT ─────────────────────────────────────────────────
+window.addEventListener('load',()=>{
+  if(APP.url) el('cfgOv').style.display='none';
   updateEntryCount(); updateSyncUI(); tick();
-  setInterval(tick, 1000);
-  setInterval(() => { if (navigator.onLine) retrySync(); }, 30000);
-  window.addEventListener('online', () => { toast('📶 Back online — syncing…', 'ok'); retrySync(); });
-  el('followUpDate').min = new Date().toISOString().split('T')[0];
+  setInterval(tick,1000);
+  setInterval(()=>{ if(navigator.onLine) retrySync(); },30000);
+  window.addEventListener('online',()=>{ toast('📶 Back online — syncing…','ok'); retrySync(); });
+  el('followUpDate').min=new Date().toISOString().split('T')[0];
+  loadGoogleMaps();
 });
 
+// ── LOAD GOOGLE MAPS ──────────────────────────────────────
+function loadGoogleMaps(){
+  window.initMap = initMap;
+  const s = document.createElement('script');
+  s.src = `https://maps.googleapis.com/maps/api/js?key=${window.GMAPS_KEY}&libraries=places&callback=initMap&language=en`;
+  s.async = true; s.defer = true;
+  s.onerror = () => console.warn('Google Maps failed to load — check API key');
+  document.head.appendChild(s);
+}
+
+function initMap(){
+  // Default centre: Jodhpur, Rajasthan
+  const defaultPos = {lat: 26.2389, lng: 73.0243};
+
+  APP.map = new google.maps.Map(el('mapCanvas'),{
+    center: defaultPos,
+    zoom: 17,
+    mapTypeId: 'hybrid',           // satellite + labels — best for field work
+    disableDefaultUI: true,
+    gestureHandling: 'greedy',     // single-finger drag on mobile
+    clickableIcons: false,
+    styles: [{featureType:'poi',stylers:[{visibility:'off'}]}] // hide clutter
+  });
+
+  APP.geocoder = new google.maps.Geocoder();
+
+  // Places Autocomplete on the search box
+  APP.autocomplete = new google.maps.places.Autocomplete(el('mapSearchInput'),{
+    componentRestrictions: {country:'in'},
+    fields: ['geometry','formatted_address','name']
+  });
+  APP.autocomplete.addListener('place_changed', onPlaceSelected);
+
+  // Update address as map moves (geocode centre)
+  let geocodeTimer = null;
+  APP.map.addListener('center_changed', ()=>{
+    el('mapDragHint').classList.add('show');
+    el('btnConfirmLoc').disabled = true;
+    el('mapAddrTxt').textContent = 'Locating…';
+    el('mapCoordsTxt').textContent = '';
+    clearTimeout(geocodeTimer);
+    geocodeTimer = setTimeout(geocodeMapCentre, 600); // debounce
+  });
+  APP.map.addListener('dragstart', ()=> el('mapDragHint').classList.add('show'));
+  APP.map.addListener('idle', ()=> setTimeout(()=> el('mapDragHint').classList.remove('show'), 1000));
+
+  APP.mapReady = true;
+  if(APP.pendingMapOpen){ APP.pendingMapOpen=false; openMapPicker(); }
+}
+
+function onPlaceSelected(){
+  const place = APP.autocomplete.getPlace();
+  if(!place.geometry?.location) return;
+  APP.map.panTo(place.geometry.location);
+  APP.map.setZoom(18);
+  // Force re-geocode after pan
+  setTimeout(geocodeMapCentre, 800);
+}
+
+function geocodeMapCentre(){
+  const centre = APP.map.getCenter();
+  const lat = centre.lat(), lng = centre.lng();
+  el('mapCoordsTxt').textContent = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+
+  APP.geocoder.geocode({location:{lat,lng}}, (results, status)=>{
+    if(status==='OK' && results[0]){
+      const addr = formatAddress(results);
+      el('mapAddrTxt').textContent = addr;
+      el('btnConfirmLoc').disabled = false;
+      el('btnConfirmLoc')._lat = lat;
+      el('btnConfirmLoc')._lng = lng;
+      el('btnConfirmLoc')._addr = addr;
+    } else {
+      el('mapAddrTxt').textContent = `${lat.toFixed(5)}, ${lng.toFixed(5)}`;
+      el('btnConfirmLoc').disabled = false;
+      el('btnConfirmLoc')._lat = lat;
+      el('btnConfirmLoc')._lng = lng;
+      el('btnConfirmLoc')._addr = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+    }
+  });
+}
+
+function formatAddress(results){
+  // Build a clean short address from geocoding results
+  const r = results[0];
+  const comps = r.address_components;
+  const get = types => {
+    const c = comps.find(c=>types.some(t=>c.types.includes(t)));
+    return c ? c.long_name : '';
+  };
+  const parts = [
+    get(['premise','street_number','route','sublocality_level_2']),
+    get(['sublocality_level_1','sublocality','neighborhood']),
+    get(['locality','postal_town']),
+    get(['administrative_area_level_2']),
+    get(['administrative_area_level_1'])
+  ].filter(Boolean);
+  return parts.length >= 2 ? parts.slice(0,4).join(', ') : r.formatted_address.split(',').slice(0,4).join(',').trim();
+}
+
+// ── MAP PICKER OPEN/CLOSE ─────────────────────────────────
+function openMapPicker(){
+  if(!APP.mapReady){ APP.pendingMapOpen=true; toast('⏳ Loading map…'); return; }
+
+  el('mapModal').classList.add('open');
+  el('mapSearchInput').value = '';
+  document.body.style.overflow = 'hidden';
+
+  // Centre on confirmed location if we have one, else get GPS
+  if(APP.gps?.lat){
+    APP.map.setCenter({lat:APP.gps.lat, lng:APP.gps.lng});
+    APP.map.setZoom(19);
+    setTimeout(geocodeMapCentre, 400);
+  } else {
+    // Try to get GPS to centre map — non-blocking
+    setLocStatus('Centering map on your location…','');
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(
+        pos => {
+          APP.map.setCenter({lat:pos.coords.latitude, lng:pos.coords.longitude});
+          APP.map.setZoom(19);
+          setTimeout(geocodeMapCentre, 400);
+          setLocStatus('','');
+        },
+        () => {
+          setTimeout(geocodeMapCentre, 400); // just geocode default centre
+          setLocStatus('','');
+        },
+        {enableHighAccuracy:true, timeout:8000, maximumAge:30000}
+      );
+    } else {
+      setTimeout(geocodeMapCentre, 400);
+    }
+  }
+
+  // Trigger resize so map renders correctly inside the modal
+  setTimeout(()=> google.maps.event.trigger(APP.map,'resize'), 100);
+}
+
+function closeMapPicker(){
+  el('mapModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function confirmLocation(){
+  const btn = el('btnConfirmLoc');
+  const lat = btn._lat, lng = btn._lng, addr = btn._addr;
+  if(!lat) return;
+
+  APP.gps = {
+    lat, lng,
+    address:  addr,
+    mapsUrl:  `https://www.google.com/maps?q=${lat},${lng}`,
+    accuracy: 5,   // pin-drop is essentially exact
+    source:   'map-pin'
+  };
+
+  closeMapPicker();
+  showConfirmedLocation();
+  calcDist();
+  updateProg();
+  toast('📍 Location pinned!','ok');
+}
+
+function showConfirmedLocation(){
+  if(!APP.gps) return;
+  el('locAddr').textContent   = APP.gps.address;
+  el('locCoords').textContent = `${APP.gps.lat.toFixed(6)}, ${APP.gps.lng.toFixed(6)}`;
+  el('locMapsLink').href      = APP.gps.mapsUrl;
+
+  const src = APP.gps.source;
+  const accEl = el('locAccBadge');
+  if(src==='map-pin'){
+    accEl.textContent='📌 Pin dropped'; accEl.className='loc-acc-badge good';
+  } else {
+    const acc = APP.gps.accuracy;
+    accEl.textContent = `±${acc}m GPS`;
+    accEl.className = 'loc-acc-badge ' + (acc<=40?'good':acc<=100?'ok':'bad');
+  }
+
+  el('locConfirmed').classList.add('show');
+  setLocStatus('','');
+}
+
+function setLocStatus(msg, color){
+  const s=el('locStatus');
+  if(!msg){ s.className='loc-status'; s.textContent=''; return; }
+  s.className='loc-status show'; s.style.color=color||'var(--slate-lt)'; s.textContent=msg;
+}
+
+// ── QUICK GPS (fallback for when offline / no map needed) ─
+async function quickGPS(){
+  const btn = el('btnGpsQuick');
+  btn.disabled=true; btn.textContent='⏳ Locating…';
+  setLocStatus('Getting GPS signal…','');
+
+  if(!navigator.geolocation){
+    setLocStatus('⚠️ Geolocation not supported','var(--err)');
+    btn.disabled=false; btn.textContent='📍 Auto GPS'; return;
+  }
+
+  const geo = hi => new Promise((res,rej)=>
+    navigator.geolocation.getCurrentPosition(res,rej,{enableHighAccuracy:hi,timeout:hi?15000:6000,maximumAge:0}));
+
+  let pos;
+  try { pos=await geo(true); }
+  catch(e){
+    try { setLocStatus('Trying standard GPS…',''); pos=await geo(false); }
+    catch(e2){
+      const m={1:'Permission denied — allow location in settings.',2:'Location unavailable.',3:'GPS timed out — try outdoors.'};
+      setLocStatus('⚠️ '+(m[e2.code]||e2.message),'var(--err)');
+      btn.disabled=false; btn.textContent='📍 Auto GPS'; return;
+    }
+  }
+
+  const lat=pos.coords.latitude, lng=pos.coords.longitude, acc=Math.round(pos.coords.accuracy);
+
+  setLocStatus('Resolving address…','');
+  let address=`${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+  try {
+    const r=await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=16&addressdetails=1`);
+    const d=await r.json();
+    if(d?.address){
+      const a=d.address;
+      const parts=[a.road||a.pedestrian||a.neighbourhood,a.suburb||a.village||a.town,a.city||a.state_district,a.state].filter(Boolean);
+      if(parts.length) address=parts.slice(0,3).join(', ');
+    }
+  }catch(e){}
+
+  APP.gps={lat,lng,address,mapsUrl:`https://www.google.com/maps?q=${lat},${lng}`,accuracy:acc,source:'gps'};
+  showConfirmedLocation();
+
+  // If map is ready, also centre map on the new GPS location for easy fine-tuning
+  if(APP.mapReady && APP.map){
+    APP.map.setCenter({lat,lng}); APP.map.setZoom(19);
+  }
+
+  btn.disabled=false; btn.textContent='🔄 Re-capture';
+  calcDist(); updateProg();
+
+  if(acc > 50){
+    toast(`⚠️ GPS accuracy ±${acc}m — tap Pick on Google Maps to fine-tune`,'warn');
+  } else {
+    toast(`✅ GPS captured (±${acc}m)`,'ok');
+  }
+}
+
 // ── DATETIME ─────────────────────────────────────────────
-function tick() {
-  const n = new Date();
-  el('liveDate').textContent = n.toLocaleDateString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
-  el('liveTime').textContent = n.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});
+function tick(){
+  const n=new Date();
+  el('liveDate').textContent=n.toLocaleDateString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
+  el('liveTime').textContent=n.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});
 }
 
 // ── PROGRESS ─────────────────────────────────────────────
-const REQ = ['gpsAddr','areaName','contactName','contactPos','contactMob','materialReq','meetingOutcome','productType','enteredBy'];
-function updateProg() {
+const REQ=['locAddr','areaName','contactName','contactPos','contactMob','materialReq','meetingOutcome','productType','enteredBy'];
+function updateProg(){
+  const locOk = APP.gps?.lat != null;
   const photoOk = APP.photos.site.b64 !== null;
-  const filled = REQ.filter(id => el(id)?.value?.trim()).length + (photoOk ? 1 : 0);
-  const total = REQ.length + 1;
-  const segs = document.querySelectorAll('.prog-seg');
-  const n = Math.round((filled / total) * segs.length);
-  segs.forEach((s, i) => s.classList.toggle('on', i < n));
-}
-
-// ── GPS ───────────────────────────────────────────────────
-async function captureGPS() {
-  const btn = el('btnGps'), stat = el('gpsStat');
-  btn.disabled = true; btn.textContent = '⏳ Locating…';
-  stat.className = 'gps-stat show'; stat.style.color = 'var(--slate-lt)';
-  stat.textContent = 'Acquiring high-accuracy GPS signal…';
-
-  if (!navigator.geolocation) {
-    stat.style.color = 'var(--err)'; stat.textContent = '⚠️ Geolocation not supported on this browser.';
-    btn.disabled = false; btn.textContent = '📍 Capture GPS'; return;
-  }
-
-  const geo = hi => new Promise((res, rej) =>
-    navigator.geolocation.getCurrentPosition(res, rej, {enableHighAccuracy: hi, timeout: hi ? 18000 : 8000, maximumAge: 0}));
-
-  let pos;
-  try { pos = await geo(true); }
-  catch(e) {
-    try { stat.textContent = 'Trying standard GPS…'; pos = await geo(false); }
-    catch(e2) {
-      const m = {1:'Permission denied. Allow location in browser/phone settings.',
-                 2:'Location unavailable. Enable GPS on your device.',
-                 3:'GPS timed out. Go outdoors and retry.'};
-      stat.style.color = 'var(--err)'; stat.textContent = '⚠️ ' + (m[e2.code] || e2.message);
-      btn.disabled = false; btn.textContent = '📍 Retry GPS'; return;
-    }
-  }
-
-  const lat = pos.coords.latitude, lng = pos.coords.longitude, acc = Math.round(pos.coords.accuracy);
-  APP.gps = { lat, lng, mapsUrl: `https://www.google.com/maps?q=${lat},${lng}`, accuracy: acc, address: `${lat.toFixed(6)}, ${lng.toFixed(6)}` };
-
-  stat.textContent = 'Resolving address…';
-  try {
-    const r = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=16&addressdetails=1`);
-    const d = await r.json();
-    if (d?.address) {
-      const a = d.address;
-      const parts = [a.road||a.pedestrian||a.neighbourhood, a.suburb||a.village||a.town, a.city||a.state_district||a.county, a.state].filter(Boolean);
-      if (parts.length) APP.gps.address = parts.slice(0,3).join(', ');
-    }
-  } catch(e) {}
-
-  set('gpsAddr', APP.gps.address);
-  el('gpsCoordsT').textContent = `📌 ${lat.toFixed(6)}, ${lng.toFixed(6)}`;
-  el('gpsMapLink').href = APP.gps.mapsUrl;
-  const accq = acc <= 40 ? 'good' : acc <= 100 ? 'ok' : 'bad';
-  const accTxt = acc <= 15 ? ' ✓ Excellent' : acc <= 40 ? ' ✓ Good' : acc <= 100 ? ' — Fair' : ' — Poor (try outdoors)';
-  el('gpsAccT').textContent = `GPS accuracy: ±${acc}m${accTxt}`;
-  el('gpsAccT').className = 'gps-acc ' + accq;
-  el('gpsDetail').classList.add('show');
-  stat.style.color = 'var(--ok)'; stat.textContent = `✅ Location captured (±${acc}m)`;
-  btn.disabled = false; btn.textContent = '🔄 Recapture';
-  updateProg(); calcDist();
+  // locAddr and gps are linked — count gps as filling locAddr
+  const textFilled = REQ.filter(id=>{
+    if(id==='locAddr') return locOk;
+    return el(id)?.value?.trim();
+  }).length;
+  const total = REQ.length + 1; // +1 for photo
+  const filled = textFilled + (photoOk?1:0);
+  const segs=document.querySelectorAll('.prog-seg');
+  const n=Math.round((filled/total)*segs.length);
+  segs.forEach((s,i)=>s.classList.toggle('on',i<n));
 }
 
 // ── DISTANCE ─────────────────────────────────────────────
 function haversine(a,b,c,d){const R=6371,dL=(c-a)*Math.PI/180,dO=(d-b)*Math.PI/180;const x=Math.sin(dL/2)**2+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dO/2)**2;return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));}
-function onPersonChange() { updateProg(); calcDist(); }
-function calcDist() {
-  if (!APP.gps?.lat) { el('distNum').textContent='—'; el('distSub').textContent='Capture GPS to auto-calculate from last entry'; return; }
-  const person = v('enteredBy');
-  if (!person) { el('distNum').textContent='—'; el('distSub').textContent='Select your name to load last location'; return; }
-  const prev = getEntries().find(e => e.enteredBy === person && e.lat && e.lng);
-  if (!prev) { el('distNum').textContent='First'; el('distSub').textContent=`No previous entry for ${person} — this is the first!`; APP.distKm='0'; return; }
-  const km = haversine(prev.lat, prev.lng, APP.gps.lat, APP.gps.lng);
-  APP.distKm = km.toFixed(1);
-  el('distNum').textContent = APP.distKm + ' km';
-  el('distSub').textContent = `From: ${prev.companyName !== '—' ? prev.companyName : prev.areaName} · ${prev.date}`;
+function onPersonChange(){ updateProg(); calcDist(); }
+function calcDist(){
+  if(!APP.gps?.lat){el('distNum').textContent='—';el('distSub').textContent='Pick location to auto-calculate from last entry';return;}
+  const person=v('enteredBy');
+  if(!person){el('distNum').textContent='—';el('distSub').textContent='Select your name to load last location';return;}
+  const prev=getEntries().find(e=>e.enteredBy===person&&e.lat&&e.lng);
+  if(!prev){el('distNum').textContent='First';el('distSub').textContent=`No previous entry for ${person}`;APP.distKm='0';return;}
+  const km=haversine(prev.lat,prev.lng,APP.gps.lat,APP.gps.lng);
+  APP.distKm=km.toFixed(1);
+  el('distNum').textContent=APP.distKm+' km';
+  el('distSub').textContent=`From: ${prev.companyName!=='—'?prev.companyName:prev.areaName} · ${prev.date}`;
 }
-function toggleManualDist() { const d=el('distManual'); d.style.display=d.style.display==='block'?'none':'block'; }
+function toggleManualDist(){const d=el('distManual');d.style.display=d.style.display==='block'?'none':'block';}
 
-// ── PHOTO HANDLING ────────────────────────────────────────
-//
-//  KEY INSIGHT: The only reliable way to POST data to Google
-//  Apps Script from a different origin without CORS errors is
-//  to use Content-Type: text/plain (or application/x-www-form-urlencoded).
-//  These are "simple requests" — browser skips the preflight.
-//
-//  We send JSON stringified as the body with Content-Type: text/plain.
-//  Apps Script reads e.postData.contents and parses it fine.
-//
-//  For photos: we compress the image to max 800px and ~200KB
-//  before encoding to base64, keeping payload small enough
-//  for a single no-cors request.
-
-async function onPhotoSelect(slot) {
-  const fileInput = el(slot === 'site' ? 'siteFile' : 'cardFile');
-  const file = fileInput.files[0];
-  if (!file) return;
-
-  // Reset state
-  APP.photos[slot] = { b64:null, file, driveUrl:null, status:'selected' };
-  clearPhotoStatus(slot);
-
-  // Compress + preview
-  showRow(slot + 'Uploading');
-  el(slot === 'site' ? 'siteZone' : 'cardZone').style.display = 'none';
-  el(slot + 'PrevWrap').style.display = 'block';
-
-  try {
-    const compressed = await compressImage(file, 1024, 0.75); // max 1024px, 75% quality
-    APP.photos[slot].b64 = compressed;
-    el(slot + 'Preview').src = compressed;
-    updateProg();
-  } catch(e) {
-    hideRow(slot + 'Uploading');
-    APP.photos[slot].status = 'error';
-    showRow(slot + 'Error');
-    el(slot + 'ErrTxt').textContent = 'Could not read image file';
-    return;
-  }
-
-  // Upload if configured
-  if (APP.url && APP.folder) {
-    await uploadPhoto(slot);
-  } else {
-    hideRow(slot + 'Uploading');
-    showRow(slot + 'Queued');
-    APP.photos[slot].status = 'queued';
-  }
-}
-
-// Compress image using canvas — reduces file size dramatically
-function compressImage(file, maxPx, quality) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onerror = reject;
-    reader.onload = e => {
-      const img = new Image();
-      img.onerror = reject;
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        let w = img.width, h = img.height;
-        if (w > maxPx || h > maxPx) {
-          if (w > h) { h = Math.round(h * maxPx / w); w = maxPx; }
-          else       { w = Math.round(w * maxPx / h); h = maxPx; }
-        }
-        canvas.width = w; canvas.height = h;
-        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-        resolve(canvas.toDataURL('image/jpeg', quality));
+// ── PHOTO ─────────────────────────────────────────────────
+function compressImage(file,maxPx,quality){
+  return new Promise((resolve,reject)=>{
+    const reader=new FileReader();
+    reader.onerror=reject;
+    reader.onload=e=>{
+      const img=new Image();img.onerror=reject;
+      img.onload=()=>{
+        let w=img.width,h=img.height;
+        if(w>maxPx||h>maxPx){if(w>h){h=Math.round(h*maxPx/w);w=maxPx;}else{w=Math.round(w*maxPx/h);h=maxPx;}}
+        const c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0,w,h);
+        resolve(c.toDataURL('image/jpeg',quality));
       };
-      img.src = e.target.result;
+      img.src=e.target.result;
     };
     reader.readAsDataURL(file);
   });
 }
 
-function deletePhoto(slot) {
-  APP.photos[slot] = { b64:null, file:null, driveUrl:null, status:'idle' };
-  el(slot === 'site' ? 'siteFile' : 'cardFile').value = '';
-  el(slot === 'site' ? 'siteZone' : 'cardZone').style.display = '';
-  el(slot + 'PrevWrap').style.display = 'none';
+async function onPhotoSelect(slot){
+  const file=el(slot==='site'?'siteFile':'cardFile').files[0];
+  if(!file) return;
+  APP.photos[slot]={b64:null,file,driveUrl:null,status:'selected'};
   clearPhotoStatus(slot);
-  updateProg();
+  showRow(slot+'Uploading');
+  el(slot==='site'?'siteZone':'cardZone').style.display='none';
+  el(slot+'PrevWrap').style.display='block';
+  try{
+    const compressed=await compressImage(file,1024,0.78);
+    APP.photos[slot].b64=compressed;
+    el(slot+'Preview').src=compressed;
+    updateProg();
+  }catch(e){
+    hideRow(slot+'Uploading');showRow(slot+'Error');el(slot+'ErrTxt').textContent='Could not read image';return;
+  }
+  if(APP.url&&APP.folder) await uploadPhoto(slot);
+  else{hideRow(slot+'Uploading');showRow(slot+'Queued');APP.photos[slot].status='queued';}
 }
 
-function clearPhotoStatus(slot) {
-  ['Uploading','Queued','Done','Error'].forEach(s => hideRow(slot + s));
+function deletePhoto(slot){
+  APP.photos[slot]={b64:null,file:null,driveUrl:null,status:'idle'};
+  el(slot==='site'?'siteFile':'cardFile').value='';
+  el(slot==='site'?'siteZone':'cardZone').style.display='';
+  el(slot+'PrevWrap').style.display='none';
+  clearPhotoStatus(slot); updateProg();
 }
+function clearPhotoStatus(slot){['Uploading','Queued','Done','Error'].forEach(s=>hideRow(slot+s));}
 
-async function uploadPhoto(slot) {
-  if (!APP.url || !APP.folder || !APP.photos[slot].b64) return false;
-  clearPhotoStatus(slot);
-  showRow(slot + 'Uploading');
-  APP.photos[slot].status = 'uploading';
-
-  const person   = v('enteredBy') || 'Unknown';
-  const dateStr  = new Date().toISOString().slice(0, 10);
-  const fileName = `${slot}_${person}_${Date.now()}.jpg`;
-  const rawB64   = APP.photos[slot].b64.split(',')[1];
-
-  const payload = JSON.stringify({
-    action:     'uploadPhoto',
-    folderId:   APP.folder,
-    subFolder:  person,
-    dateFolder: dateStr,
-    fileName,
-    mimeType:   'image/jpeg',
-    base64Data: rawB64
-  });
-
-  // ── THE FIX: text/plain Content-Type = no preflight = no CORS error ──
-  try {
-    const resp = await fetch(APP.url, {
-      method:  'POST',
-      headers: { 'Content-Type': 'text/plain' },  // ← key: avoids preflight
-      body:    payload
-    });
-    const json = await resp.json();
-    if (json.status === 'ok' && json.fileUrl) {
-      APP.photos[slot].driveUrl = json.fileUrl;
-      APP.photos[slot].status   = 'done';
-      clearPhotoStatus(slot);
-      showRow(slot + 'Done');
-      el(slot + 'DriveLink').href = json.fileUrl;
-      return true;
-    } else {
-      throw new Error(json.message || 'Script returned an error');
-    }
-  } catch(err) {
-    // If fetch itself fails (offline, DNS etc) — queue for later
+async function uploadPhoto(slot){
+  if(!APP.url||!APP.folder||!APP.photos[slot].b64) return false;
+  clearPhotoStatus(slot); showRow(slot+'Uploading');
+  APP.photos[slot].status='uploading';
+  const person=v('enteredBy')||'Unknown';
+  const dateStr=new Date().toISOString().slice(0,10);
+  const fileName=`${slot}_${person}_${Date.now()}.jpg`;
+  const payload=JSON.stringify({action:'uploadPhoto',folderId:APP.folder,subFolder:person,
+    dateFolder:dateStr,fileName,mimeType:'image/jpeg',base64Data:APP.photos[slot].b64.split(',')[1]});
+  try{
+    const resp=await fetch(APP.url,{method:'POST',headers:{'Content-Type':'text/plain'},body:payload});
+    const json=await resp.json();
+    if(json.status==='ok'&&json.fileUrl){
+      APP.photos[slot].driveUrl=json.fileUrl; APP.photos[slot].status='done';
+      clearPhotoStatus(slot); showRow(slot+'Done');
+      el(slot+'DriveLink').href=json.fileUrl; return true;
+    } else throw new Error(json.message||'Script error');
+  }catch(err){
     clearPhotoStatus(slot);
-    if (!navigator.onLine || err.name === 'TypeError') {
-      // Offline — queue
-      APP.photos[slot].status = 'queued';
-      showRow(slot + 'Queued');
-    } else {
-      // Online but error — show error with message
-      APP.photos[slot].status = 'error';
-      showRow(slot + 'Error');
-      el(slot + 'ErrTxt').textContent = err.message.length > 80 ? err.message.slice(0,80)+'…' : err.message;
-    }
+    if(!navigator.onLine||err.name==='TypeError'){APP.photos[slot].status='queued';showRow(slot+'Queued');}
+    else{APP.photos[slot].status='error';showRow(slot+'Error');el(slot+'ErrTxt').textContent=err.message.slice(0,80);}
     return false;
   }
 }
 
 // ── SUBMIT ────────────────────────────────────────────────
-async function submitForm() {
-  if (APP.busy) return;
-  if (!APP.photos.site.b64) { toast('⚠️ Please take a site photo', 'err'); return; }
-  if (!APP.gps?.lat)        { toast('⚠️ Capture GPS location first', 'err'); return; }
-
-  const reqs = {areaName:'Area Name',contactName:'Contact Person',contactPos:'Designation',
-                contactMob:'Mobile',materialReq:'Material Required',meetingOutcome:'Meeting Outcome',
-                productType:'Product Type',enteredBy:'Entered By'};
-  for (const [id, lbl] of Object.entries(reqs)) {
-    if (!el(id).value.trim()) { toast(`⚠️ Fill: ${lbl}`, 'err'); el(id).focus(); return; }
+async function submitForm(){
+  if(APP.busy) return;
+  if(!APP.photos.site.b64){toast('⚠️ Please take a site photo','err');return;}
+  if(!APP.gps?.lat){toast('⚠️ Pick a location first','err');return;}
+  const reqs={areaName:'Area Name',contactName:'Contact Person',contactPos:'Designation',
+    contactMob:'Mobile',materialReq:'Material Required',meetingOutcome:'Meeting Outcome',
+    productType:'Product Type',enteredBy:'Entered By'};
+  for(const[id,lbl]of Object.entries(reqs)){
+    if(!el(id).value.trim()){toast(`⚠️ Fill: ${lbl}`,'err');el(id).focus();return;}
   }
-  if (!/^\d{10}$/.test(v('contactMob').trim())) { toast('⚠️ Enter valid 10-digit mobile', 'err'); return; }
+  if(!/^\d{10}$/.test(v('contactMob').trim())){toast('⚠️ Enter valid 10-digit mobile','err');return;}
 
-  // Try uploading queued photos now before submit
-  if (['queued','selected'].includes(APP.photos.site.status) && APP.url && APP.folder) {
-    toast('⏳ Uploading site photo first…');
-    await uploadPhoto('site');
+  if(['queued','selected'].includes(APP.photos.site.status)&&APP.url&&APP.folder){
+    toast('⏳ Uploading photos first…'); await uploadPhoto('site');
   }
-  if (['queued','selected'].includes(APP.photos.card.status) && APP.url && APP.folder) {
+  if(['queued','selected'].includes(APP.photos.card.status)&&APP.url&&APP.folder){
     await uploadPhoto('card');
   }
 
-  APP.busy = true;
-  const btn = el('submitBtn');
-  btn.classList.add('loading'); btn.disabled = true;
+  APP.busy=true;
+  const btn=el('submitBtn'); btn.classList.add('loading'); btn.disabled=true;
+  const now=new Date();
+  const km=v('kmManual')||APP.distKm||'N/A';
 
-  const now = new Date();
-  const km  = v('kmManual') || APP.distKm || 'N/A';
-
-  const entry = {
-    id:              'e_' + Date.now(),
-    synced:          false,
-    date:            now.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}),
-    time:            now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true}),
-    lat:             APP.gps.lat,
-    lng:             APP.gps.lng,
-    locationAddress: APP.gps.address,
-    locationUrl:     APP.gps.mapsUrl,
-    locationAccuracy:APP.gps.accuracy,
-    areaName:        v('areaName').trim(),
-    kmTravelled:     km,
-    companyName:     v('companyName').trim() || '—',
-    contactName:     v('contactName').trim(),
-    contactPos:      v('contactPos').trim(),
-    contactMob:      v('contactMob').trim(),
-    sitePhotoUrl:    APP.photos.site.driveUrl || (APP.photos.site.b64 ? 'Photo taken — uploading pending' : '—'),
-    cardPhotoUrl:    APP.photos.card.driveUrl || '—',
-    materialReq:     v('materialReq'),
-    meetingOutcome:  v('meetingOutcome'),
-    productType:     v('productType'),
-    quantity:        v('quantity').trim() || '—',
-    competitor:      v('competitor').trim() || '—',
-    followUpDate:    v('followUpDate') || '—',
-    remarks:         v('remarks').trim() || '—',
-    enteredBy:       v('enteredBy'),
-    timestamp:       now.toISOString()
+  const entry={
+    id:'e_'+Date.now(),synced:false,
+    date:now.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}),
+    time:now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true}),
+    lat:APP.gps.lat,lng:APP.gps.lng,
+    locationAddress:APP.gps.address,locationUrl:APP.gps.mapsUrl,
+    locationAccuracy:APP.gps.accuracy,locationSource:APP.gps.source,
+    areaName:v('areaName').trim(),kmTravelled:km,
+    companyName:v('companyName').trim()||'—',
+    contactName:v('contactName').trim(),contactPos:v('contactPos').trim(),contactMob:v('contactMob').trim(),
+    sitePhotoUrl:APP.photos.site.driveUrl||(APP.photos.site.b64?'Photo taken — Drive pending':'—'),
+    cardPhotoUrl:APP.photos.card.driveUrl||'—',
+    materialReq:v('materialReq'),meetingOutcome:v('meetingOutcome'),productType:v('productType'),
+    quantity:v('quantity').trim()||'—',competitor:v('competitor').trim()||'—',
+    followUpDate:v('followUpDate')||'—',remarks:v('remarks').trim()||'—',
+    enteredBy:v('enteredBy'),timestamp:now.toISOString()
   };
 
-  // Save locally first — always
-  const all = getEntries();
-  all.unshift(entry);
-  localStorage.setItem('hx_entries', JSON.stringify(all));
+  const all=getEntries(); all.unshift(entry); localStorage.setItem('hx_entries',JSON.stringify(all));
   updateEntryCount();
 
-  // Sync sheet row
-  const synced = await syncRow(entry);
-  if (synced) {
-    entry.synced = true;
-    const updated = getEntries();
-    const idx = updated.findIndex(e => e.id === entry.id);
-    if (idx > -1) { updated[idx].synced = true; localStorage.setItem('hx_entries', JSON.stringify(updated)); }
-    toast('✅ Submitted & synced to Google Sheets!', 'ok');
+  const synced=await syncRow(entry);
+  if(synced){
+    entry.synced=true;
+    const updated=getEntries(); const idx=updated.findIndex(e=>e.id===entry.id);
+    if(idx>-1){updated[idx].synced=true;localStorage.setItem('hx_entries',JSON.stringify(updated));}
+    toast('✅ Submitted & synced to Google Sheets!','ok');
   } else {
-    toast('✅ Saved locally\nWill sync to Sheets when online', 'warn');
+    toast('✅ Saved locally\nWill sync to Sheets when online','warn');
   }
-
-  updateSyncUI();
-  APP.busy = false;
-  btn.classList.remove('loading'); btn.disabled = false;
+  updateSyncUI(); APP.busy=false;
+  btn.classList.remove('loading'); btn.disabled=false;
   resetForm();
 }
 
-// ── SYNC ROW ──────────────────────────────────────────────
-// Same fix: text/plain avoids preflight CORS block
-async function syncRow(entry) {
-  if (!APP.url) return false;
-  const payload = JSON.stringify({ action: 'addRow', ...entry });
-  try {
-    const resp = await fetch(APP.url, {
-      method:  'POST',
-      headers: { 'Content-Type': 'text/plain' },
-      body:    payload
-    });
-    const json = await resp.json();
-    return json.status === 'ok';
-  } catch(e) {
-    return false;
-  }
+// ── SYNC ─────────────────────────────────────────────────
+async function syncRow(entry){
+  if(!APP.url) return false;
+  try{
+    const resp=await fetch(APP.url,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({action:'addRow',...entry})});
+    const json=await resp.json(); return json.status==='ok';
+  }catch(e){ return false; }
 }
-
-async function retrySync() {
-  if (!APP.url || !navigator.onLine) return;
-  const all = getEntries();
-  const pending = all.filter(e => !e.synced);
-  if (!pending.length) return;
-  let count = 0;
-  for (const entry of pending) {
-    if (await syncRow(entry)) { entry.synced = true; count++; }
-  }
-  if (count > 0) {
-    localStorage.setItem('hx_entries', JSON.stringify(all));
-    updateSyncUI(); updateEntryCount();
-    toast(`✅ ${count} entr${count>1?'ies':'y'} synced`, 'ok');
-  }
+async function retrySync(){
+  if(!APP.url||!navigator.onLine) return;
+  const all=getEntries(); const pending=all.filter(e=>!e.synced); if(!pending.length) return;
+  let count=0;
+  for(const entry of pending){ if(await syncRow(entry)){entry.synced=true;count++;} }
+  if(count>0){localStorage.setItem('hx_entries',JSON.stringify(all));updateSyncUI();updateEntryCount();toast(`✅ ${count} entr${count>1?'ies':'y'} synced`,'ok');}
 }
-
-function updateSyncUI() {
-  const n = getEntries().filter(e => !e.synced).length;
-  el('syncPillTxt').textContent = `${n} Pending`;
-  el('syncBannerTxt').textContent = `${n} entr${n>1?'ies':'y'}`;
-  el('syncPill').style.display = n > 0 ? 'flex' : 'none';
-  el('syncBanner').classList.toggle('show', n > 0);
+function updateSyncUI(){
+  const n=getEntries().filter(e=>!e.synced).length;
+  el('syncPillTxt').textContent=`${n} Pending`;el('syncBannerTxt').textContent=`${n} entr${n>1?'ies':'y'}`;
+  el('syncPill').style.display=n>0?'flex':'none';el('syncBanner').classList.toggle('show',n>0);
 }
-
-function openSyncModal() {
-  const pending = getEntries().filter(e => !e.synced);
-  el('syncBody').innerHTML = pending.length
-    ? `<div style="padding:12px 0 6px;font-size:13px;color:var(--muted)">${pending.length} waiting to sync:</div>`
-      + pending.map(e=>`<div class="ec"><div class="ec-top"><div class="ec-co">${e.companyName!=='—'?e.companyName:e.areaName}</div><div class="ec-badge pend">PENDING</div></div><div class="ec-meta"><span>${e.date}</span><span>${e.enteredBy}</span></div></div>`).join('')
-      + `<button onclick="retrySync();closeModal('syncOv')" style="width:100%;background:var(--warn);border:none;border-radius:var(--r-sm);color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:14px;padding:12px;cursor:pointer;margin-top:8px">⚡ Retry Sync Now</button>`
-    : '<div style="text-align:center;padding:24px;color:var(--muted)">✅ All entries synced!</div>';
+function openSyncModal(){
+  const pending=getEntries().filter(e=>!e.synced);
+  el('syncBody').innerHTML=pending.length
+    ?`<div style="padding:12px 0 6px;font-size:13px;color:var(--muted)">${pending.length} waiting:</div>`
+      +pending.map(e=>`<div class="ec"><div class="ec-top"><div class="ec-co">${e.companyName!=='—'?e.companyName:e.areaName}</div><div class="ec-badge pend">PENDING</div></div><div class="ec-meta"><span>${e.date}</span><span>${e.enteredBy}</span></div></div>`).join('')
+      +`<button onclick="retrySync();closeModal('syncOv')" style="width:100%;background:var(--warn);border:none;border-radius:var(--r-sm);color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:14px;padding:12px;cursor:pointer;margin-top:8px">⚡ Retry Sync Now</button>`
+    :'<div style="text-align:center;padding:24px;color:var(--muted)">✅ All entries synced!</div>';
   el('syncOv').classList.add('open');
 }
 
 // ── RESET ─────────────────────────────────────────────────
-function resetForm() {
+function resetForm(){
   el('mainForm').reset();
-  APP.gps = null; APP.distKm = null;
-  el('gpsAddr').value=''; el('gpsDetail').classList.remove('show');
-  el('gpsStat').className='gps-stat'; el('btnGps').textContent='📍 Capture GPS'; el('btnGps').disabled=false;
-  ['site','card'].forEach(slot => {
-    APP.photos[slot] = {b64:null,file:null,driveUrl:null,status:'idle'};
+  APP.gps=null; APP.distKm=null;
+  el('locConfirmed').classList.remove('show');
+  setLocStatus('','');
+  ['site','card'].forEach(slot=>{
+    APP.photos[slot]={b64:null,file:null,driveUrl:null,status:'idle'};
     el(slot==='site'?'siteFile':'cardFile').value='';
     el(slot==='site'?'siteZone':'cardZone').style.display='';
     el(slot+'PrevWrap').style.display='none';
     clearPhotoStatus(slot);
   });
-  el('distNum').textContent='—'; el('distSub').textContent='Select name + capture GPS to auto-calculate';
-  el('distManual').style.display='none'; el('kmManual').value='';
+  el('distNum').textContent='—';el('distSub').textContent='Select name + pick location to auto-calculate';
+  el('distManual').style.display='none';el('kmManual').value='';
+  el('btnGpsQuick').disabled=false;el('btnGpsQuick').textContent='📍 Auto GPS';
   updateProg(); window.scrollTo({top:0,behavior:'smooth'});
 }
 
 // ── ENTRIES ───────────────────────────────────────────────
-function getEntries() { return JSON.parse(localStorage.getItem('hx_entries')||'[]'); }
-function updateEntryCount() { el('entryCount').textContent=`Entries (${getEntries().length})`; }
-function openEntries() {
-  const all = getEntries();
-  el('entriesBody').innerHTML = all.length
-    ? all.map(e=>`<div class="ec">
-        <div class="ec-top"><div class="ec-co">${e.companyName!=='—'?e.companyName:e.areaName}</div><div class="ec-badge">${e.enteredBy}</div></div>
-        <div class="ec-meta"><span>${e.date} · ${e.time}</span><span>${e.areaName}</span><span>${e.contactName}</span><span>${e.productType}</span><span>${e.meetingOutcome}</span><span>${e.kmTravelled} km</span></div>
-        <div class="ec-sync ${e.synced?'synced':'pend'}">${e.synced?'✅ Synced to Sheets':'⏳ Pending sync'}</div>
-      </div>`).join('')
-    : '<div style="text-align:center;padding:28px;color:var(--muted)">No entries yet.</div>';
+function getEntries(){return JSON.parse(localStorage.getItem('hx_entries')||'[]');}
+function updateEntryCount(){el('entryCount').textContent=`Entries (${getEntries().length})`;}
+function openEntries(){
+  const all=getEntries();
+  el('entriesBody').innerHTML=all.length
+    ?all.map(e=>`<div class="ec"><div class="ec-top"><div class="ec-co">${e.companyName!=='—'?e.companyName:e.areaName}</div><div class="ec-badge">${e.enteredBy}</div></div>
+       <div class="ec-meta"><span>${e.date} · ${e.time}</span><span>${e.areaName}</span><span>${e.contactName}</span><span>${e.productType}</span><span>${e.meetingOutcome}</span><span>${e.kmTravelled} km</span></div>
+       <div class="ec-sync ${e.synced?'synced':'pend'}">${e.synced?'✅ Synced':'⏳ Pending sync'}</div></div>`).join('')
+    :'<div style="text-align:center;padding:28px;color:var(--muted)">No entries yet.</div>';
   el('entriesOv').classList.add('open');
 }
 
-if ('serviceWorker' in navigator) {
+if('serviceWorker' in navigator){
   navigator.serviceWorker.register(URL.createObjectURL(new Blob(
     [`self.addEventListener('install',e=>self.skipWaiting());self.addEventListener('activate',e=>clients.claim());self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).catch(()=>new Response(''))));`],
     {type:'application/javascript'}))).catch(()=>{});
